@@ -8,6 +8,10 @@
   -ms-user-select: none;
   user-select: none;
 }
+.ui-flipbook{
+	direction: rtl;
+}
+
 .ui-flipbook .page {
   background-color: white;
 }

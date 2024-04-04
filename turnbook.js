@@ -950,7 +950,7 @@ $(document).ready(bootstrap);
       pageHeight: 721,
       pages: 8
     },
-    shareMessage: 'Introducing turn.js 5 - HTML5 Library for Flipbooks.',
+    shareMessage: 'Second Nature Example Lesson',
     pageFolder: 'content',
-    loadRegions: true,
+    loadRegions: false,
   };
