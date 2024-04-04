@@ -56,8 +56,9 @@ var FlipbookView = SingleView.extend({
   initialize: function() {
     this.events[(Turn.isTouchDevice) ? 'doubletap' : 'tap'] = '_toggleZoomEvent';
     $(window).keydown($.proxy(this, '_keydownEvent'));
-    $('body').on('tap', '.ui-arrow-next-page', $.proxy(this, '_tapNextArrowEvent'));
-    $('body').on('tap', '.ui-arrow-previous-page', $.proxy(this, '_tapPreviousArrowEvent'));
+	// (hai) changed order to support rtl
+    $('body').on('tap', '.ui-arrow-next-page', $.proxy(this, '_tapPreviousArrowEvent'));
+    $('body').on('tap', '.ui-arrow-previous-page', $.proxy(this, '_tapNextArrowEvent'));
 
     // Tooltip for regions
     this.$el.tooltips({
@@ -133,7 +134,8 @@ var FlipbookView = SingleView.extend({
   },
 
   _keydownEvent: function(event) {
-    var nextArrow = 39, prevArrow = 37;
+	// (hai) changed order to support rtl
+    var nextArrow = 37, prevArrow = 39;
     if (event.keyCode==prevArrow) {
       this.$el.turn('previous');
     } else if (event.keyCode==nextArrow) {

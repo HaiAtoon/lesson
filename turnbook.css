@@ -388,10 +388,12 @@ body {
 .ui-arrow-control-tap {
   opacity: 1;
 }
-.first-page .ui-arrow-previous-page {
+
+/* (hai) replaced prev/next in order to support rtl */
+.first-page .ui-arrow-next-page {
   opacity: 0;
 }
-.last-page .ui-arrow-next-page {
+.last-page .ui-arrow-previous-page {
   opacity: 0;
 }
 .ui-spinner {
